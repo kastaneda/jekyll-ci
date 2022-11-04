@@ -4,4 +4,7 @@ build:
 rebuild:
 	docker build -t kastaneda/jekyll-ci --no-cache ./
 
-.PHONY: build rebuild
+push:
+	docker push kastaneda/jekyll-ci
+
+.PHONY: build rebuild push
