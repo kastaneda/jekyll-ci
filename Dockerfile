@@ -1,6 +1,7 @@
 FROM jekyll/minimal
 
 RUN apk add --no-cache libcurl xz-libs \
+ && apk add make \
  && apk add --no-cache --virtual tmp build-base libxml2-dev libxslt-dev \
  && gem install html-proofer -v 3.19.3 \
  && apk del tmp \
